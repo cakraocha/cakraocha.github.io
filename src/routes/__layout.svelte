@@ -5,6 +5,7 @@
 	import IconButton, { Icon } from '@smui/icon-button';
 	import { mdiMenu, mdiWeatherSunny, mdiWeatherNight } from '@mdi/js';
 	import { Svg } from '@smui/common/elements';
+  import { base } from '$app/paths';
 
 	let topAppBar: TopAppBarComponentDev;
 
@@ -18,13 +19,13 @@
 <svelte:head>
 	<!-- SMUI Styles -->
 	{#if darkTheme === undefined}
-		<link rel="stylesheet" href="/smui.css" media="(prefers-color-scheme: light)" />
-		<link rel="stylesheet" href="/smui-dark.css" media="screen and (prefers-color-scheme: dark)" />
+		<link rel="stylesheet" href="{base}/smui.css" media="(prefers-color-scheme: light)" />
+		<link rel="stylesheet" href="{base}/smui-dark.css" media="screen and (prefers-color-scheme: dark)" />
 	{:else if darkTheme}
-		<link rel="stylesheet" href="/smui.css" />
-		<link rel="stylesheet" href="/smui-dark.css" media="screen" />
+		<link rel="stylesheet" href="{base}/smui.css" />
+		<link rel="stylesheet" href="{base}/smui-dark.css" media="screen" />
 	{:else}
-		<link rel="stylesheet" href="/smui.css" />
+		<link rel="stylesheet" href="{base}/smui.css" />
 	{/if}
 </svelte:head>
 
